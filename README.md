@@ -1,4 +1,4 @@
->**Note**: This is a repository created as part of an Udacity course. 
+>**Note**: Repository created as part of an Udacity course. 
 
 ## Bikeshare data analysis with Python
 

@@ -16,9 +16,9 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!\n')
-    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    # get user input for city (chicago, new york city, washington)
     city = input('Which city data are you interested in analysing?... ').lower()     
-    if city not in CITY_DATA:
+    while city not in CITY_DATA:
         print('There\'s no data available for {}'.format(city))
         print('Please inset one of these cities: {}... '.format(list(CITY_DATA.keys())))
         city = input().lower()
@@ -75,37 +75,55 @@ def load_data(city, month, day):
         
         print('It wasn\'t possible to filter the data because one of your inputs was incorrect. \nPlease select the filters again.')    
         
-           
-        for i, month in enumerate(month_list):
-                                     
-            m = input('Did you mean {}?... Y/N '.format(month)).lower()
-                
-            if i == len(month_list) - 1:
-                
-                month = 'All'
-                print('No filter applied for month')
-                
-            elif m == 'y': 
-                
-                month = month_list[i]
-                df = df[df['Month'] == month]
-                break
+        m = input('Did you want to filter by month? ... Y/N ').lower()
         
-        for i, day in enumerate(day_list):
-                                     
-            d = input('Did you mean {}?... Y/N '.format(day)).lower()
-                
-            if i == len(day_list) - 1:
-                
-                day = 'All'
-                print('No filter applied for day')
-                
-            elif d == 'y': 
-                
-                day = day_list[i]
-                df = df[df['Day_of_week'] == day]
-                break
+        if m != 'n':
+            
+            for i, month in enumerate(month_list):
+                                         
+                m = input('Did you mean {}?... Y/N '.format(month)).lower()
+                    
+                if i == len(month_list) - 1:
+                    
+                    month = 'All'
+                    print('No filter applied for month')
+                    
+                elif m == 'y': 
+                    
+                    month = month_list[i]
+                    df = df[df['Month'] == month]
+                    break
         
+        else:
+            
+            month = 'All'
+            print('No filter applied for month')
+
+
+        d = input('Did you want to filter by day? ... Y/N ').lower()
+        
+        if d != 'n':            
+            
+            for i, day in enumerate(day_list):
+                                         
+                d = input('Did you mean {}?... Y/N '.format(day)).lower()
+                    
+                if i == len(day_list) - 1:
+                    
+                    day = 'All'
+                    print('No filter applied for day')
+                    
+                elif d == 'y': 
+                    
+                    day = day_list[i]
+                    df = df[df['Day_of_week'] == day]
+                    break
+        
+        else:
+            
+            day = 'All'
+            print('No filter applied for day')
+    
     return df
 
 

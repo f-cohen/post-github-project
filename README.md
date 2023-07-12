@@ -1,17 +1,18 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
+>**Note**: This is a repository created as part of an Udacity course. 
 
 ### Date created
-Include the date you created this project and README file.
+
+* The `bikeshare.py` code is dated June, 21, 2023.
+* The `README.md` file is dated July, 7, 2023.
 
 ### Project Title
-Replace the Project Title
+Explore **US Bikeshare** data
 
 ### Description
-Describe what your project is about and what it does
+In this project I explored data related with bike share systems in the United States, using **Python**.
 
 ### Files used
-Include the files used
+[Chicago](https://divvybikes.com/system-data), [New York City](https://citibikenyc.com/system-data), [Washington](https://capitalbikeshare.com/system-data)
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+[Udacity](https://www.udacity.com/course/programming-for-data-science-nanodegree--nd104)
